@@ -1,5 +1,5 @@
 console.log('%c HI', 'color: firebrick')
-document.addEventListener('DOMContentLoaded', fetchImages)
+document.addEventListener('DOMContentLoaded', fetchImages())
 
 
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
