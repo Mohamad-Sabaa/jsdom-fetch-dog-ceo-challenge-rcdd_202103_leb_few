@@ -15,7 +15,7 @@ function fetchImages () {
     images.insertAdjacentHTML('beforeend', `<img src=$(json(message[1]))`);
   });
 
-  
+
 }
 
 
