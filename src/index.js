@@ -1,7 +1,11 @@
 console.log('%c HI', 'color: firebrick')
-const image = document.getElementById("dog-image-container");
+document.addEventListener('DOMContentLoaded', run)
+
+
+const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
+
 function fetchImages (image) {
-  return fetch("https://dog.ceo/api/breeds/image/random/4")
+  return fetch(imgUrl)
   .then(function(response) {
     return response.json();
   })
