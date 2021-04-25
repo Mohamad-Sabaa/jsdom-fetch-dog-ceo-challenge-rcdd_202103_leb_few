@@ -11,10 +11,9 @@ function fetchImages () {
   })
   .then(function(json) {
     console.log(json);
-    for(let i = 0; i < images.length; i++)
+    for(let i = 0; i < 4; i++)
     images.insertAdjacentHTML('beforeend', `<img src=$(json(message[1]))`);
   });
-
 
 }
 
