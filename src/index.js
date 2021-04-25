@@ -7,6 +7,7 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all';
 
 function fetchImages () {
   const images = document.getElementById("dog-image-container");
+  const ulList = document.getElementById("dog-breeds");
    fetch(imgUrl)
   .then(function(response) {
     return response.json();
@@ -22,6 +23,9 @@ function fetchImages () {
     return response.json();
   }).then(function(json) {
     console.log(json);
+    for(const key in json.message) {
+      ulList.insertAdjacentHTML('beforeend', `<li>${key}</li>`)
+    }
   })
 }
 
